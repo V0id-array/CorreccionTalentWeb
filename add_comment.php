@@ -16,9 +16,8 @@ if (isset($_POST['body']) && isset($_GET['id'])) {
     }
     $userId = $_SESSION['userId'];
 
-    // Validate userId (example: check if it's an integer)
+
     if (!is_numeric($userId)) {
-        // Log the attempt or redirect to an error page
         header("Location: list_players.php?error=invalid_user");
         exit();
     }
